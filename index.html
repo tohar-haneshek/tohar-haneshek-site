@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>טוהר הנשק | אימון כניסה אישי לבעלי רישיון נשק</title>
+<meta name="description" content="אימון כניסה אישי עם יוצאי יחידות לוחמה בטרור. הרצליה ועזריקם. תפעול נשק, ביטחון עצמי ושליטה אמיתית — לפי הנחיות משרד הביטחון.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0b0c;
+    --bg-alt:#121412;
+    --bg-card:#181b19;
+    --line:#2a2e2b;
+    --ink:#f4f3ee;
+    --ink-dim:#b9beb8;
+    --ink-faint:#7d847d;
+    --green:#22e29a;
+    --green-dim:#16a97a;
+    --green-deep:#0f3a2d;
+    --amber:#e2b422;
+    --radius:14px;
+    --shadow: 0 20px 60px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Heebo', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{
+    font-family:'Frank Ruhl Libre', serif;
+    letter-spacing:-0.3px;
+    line-height:1.18;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:700; letter-spacing:.5px;
+    color:var(--green);
+    background:rgba(34,226,154,.08);
+    border:1px solid rgba(34,226,154,.25);
+    padding:7px 14px; border-radius:999px;
+    text-transform:uppercase;
+  }
+  .eyebrow svg{width:14px; height:14px; flex:none;}
+
+  /* ---------- Top trust bar ---------- */
+  .topbar{
+    background:var(--bg-alt);
+    border-bottom:1px solid var(--line);
+    text-align:center;
+    font-size:13px;
+    color:var(--ink-dim);
+    padding:9px 16px;
+    letter-spacing:.2px;
+  }
+  .topbar b{color:var(--ink);}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(10,11,12,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px; max-width:1120px; margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px;}
+  .brand .mark{width:34px; height:34px; flex:none;}
+  .header-actions{display:flex; align-items:center; gap:14px;}
+  .phone-link{
+    display:flex; align-items:center; gap:6px;
+    font-size:14px; color:var(--ink-dim); font-weight:600;
+    white-space:nowrap;
+  }
+  .phone-link svg{width:16px; height:16px; stroke:var(--green);}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    background:var(--green); color:#06140f;
+    font-weight:800; font-size:15px;
+    padding:13px 22px; border-radius:10px;
+    border:none; cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    box-shadow:0 8px 24px rgba(34,226,154,.22);
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px) scale(1.02); box-shadow:0 12px 30px rgba(34,226,154,.32);}
+  .btn.small{padding:10px 16px; font-size:13.5px; border-radius:8px;}
+  .btn.ghost{
+    background:transparent; color:var(--ink); border:1px solid var(--line);
+    box-shadow:none;
+  }
+  .btn.ghost:hover{border-color:var(--green); color:var(--green);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:76px 0 64px;
+    background:
+      radial-gradient(ellipse 900px 500px at 85% -10%, rgba(34,226,154,.14), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 5% 20%, rgba(34,226,154,.06), transparent 60%),
+      var(--bg);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size:42px 42px;
+    mask-image:radial-gradient(ellipse 700px 500px at 75% 10%, black, transparent 70%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center;
+    position:relative; z-index:1;
+  }
+  .hero h1{
+    font-size:52px; font-weight:800; margin:18px 0 20px;
+  }
+  .hero h1 .hl{color:var(--green);}
+  .hero p.sub{
+    font-size:19px; color:var(--ink-dim); max-width:520px; margin-bottom:30px;
+  }
+  .hero-cta-row{display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+  .hero-micro{font-size:13px; color:var(--ink-faint); margin-top:12px;}
+  .hero-badges{
+    display:flex; gap:22px; margin-top:38px; flex-wrap:wrap;
+  }
+  .hero-badge{display:flex; align-items:center; gap:9px; font-size:13.5px; color:var(--ink-dim);}
+  .hero-badge svg{width:18px; height:18px; stroke:var(--green); flex:none;}
+  .hero-location{
+    margin-top:14px; font-size:14.5px; color:var(--ink-dim);
+    display:flex; align-items:center; gap:6px;
+  }
+  .hero-location b{color:var(--ink); font-weight:700;}
+
+  .hero-visual{
+    position:relative;
+    aspect-ratio:1/1.05;
+    border-radius:20px;
+    overflow:hidden;
+    background:linear-gradient(160deg, #0f120f, #060706);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:var(--shadow);
+  }
+  .hero-visual img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    object-position:50% 18%;
+    filter:saturate(1.05) contrast(1.05);
+  }
+  .hero-visual::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(6,7,6,.05) 40%, rgba(6,7,6,.85) 100%);
+  }
+  .hero-visual .crosshair{width:58%; opacity:.95;}
+  .hero-visual .price-float{
+    position:absolute; bottom:22px; left:22px; z-index:2;
+    background:var(--bg-card); border:1px solid var(--line);
+    border-radius:12px; padding:14px 18px;
+    display:flex; align-items:center; gap:12px;
+    box-shadow:var(--shadow);
+  }
+  .hero-visual .price-float .num{font-family:'Frank Ruhl Libre'; font-size:26px; font-weight:800; color:var(--green);}
+  .hero-visual .price-float .lbl{font-size:12px; color:var(--ink-dim);}
+
+  section{padding:88px 0;}
+  .section-head{max-width:640px; margin:0 auto 46px; text-align:center;}
+  .section-head h2{font-size:36px; font-weight:800; margin:14px 0 12px;}
+  .section-head p{color:var(--ink-dim); font-size:17px;}
+  .section-alt{background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+
+  /* ---------- Pain points ---------- */
+  .pain-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:10px;}
+  .pain-card{
+    background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px; display:flex; gap:16px; align-items:flex-start;
+  }
+  .pain-card svg{width:22px; height:22px; stroke:var(--amber); flex:none; margin-top:2px;}
+  .pain-card p{color:var(--ink-dim); font-size:15.5px;}
+  .agitation{
+    margin-top:34px; text-align:center; font-size:19px; font-weight:600;
+    color:var(--ink); max-width:720px; margin-inline:auto;
+    border-top:1px solid var(--line); padding-top:34px;
+  }
+  .agitation .hl{color:var(--green);}
+
+  /* ---------- Story ---------- */
+  .story-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:56px; align-items:center;}
+  .story-photo{
+    aspect-ratio:4/5; border-radius:var(--radius); border:1px solid var(--line);
+    background:linear-gradient(160deg,#141712,#08090a);
+    display:flex; align-items:center; justify-content:center; position:relative;
+    overflow:hidden;
+  }
+  .story-photo .ph-icon{width:34%; opacity:.5;}
+  .story-photo .ph-tag{
+    position:absolute; bottom:16px; right:16px; left:16px;
+    font-size:11.5px; color:var(--ink-faint); text-align:center;
+    border-top:1px dashed var(--line); padding-top:10px;
+  }
+  .story-text h2{font-size:32px; margin-bottom:16px;}
+  .story-text p{color:var(--ink-dim); font-size:16.5px; margin-bottom:16px;}
+  .quote-box{
+    margin-top:22px; padding:22px 24px; border-radius:12px;
+    background:var(--green-deep); border:1px solid rgba(34,226,154,.3);
+    font-family:'Frank Ruhl Libre'; font-size:19px; font-weight:600; color:#eafff5;
+  }
+  .quote-box cite{
+    display:block; margin-top:10px; font-family:'Heebo'; font-size:13px; font-weight:600;
+    color:var(--green); font-style:normal;
+  }
+
+  /* ---------- Why us cards ---------- */
+  .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .why-card{
+    background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:30px 26px;
+  }
+  .why-card .num{
+    font-family:'Frank Ruhl Libre'; font-size:15px; color:var(--green); font-weight:800;
+    border:1px solid rgba(34,226,154,.35); width:32px; height:32px; border-radius:9px;
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+  }
+  .why-card h3{font-size:19px; margin-bottom:10px;}
+  .why-card p{color:var(--ink-dim); font-size:14.5px;}
+
+  /* ---------- What's included ---------- */
+  .included-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  .included-card{
+    background:var(--bg-card); border:1px solid var(--line); border-radius:12px;
+    padding:22px 18px; text-align:center;
+  }
+  .included-card .ic{
+    width:40px; height:40px; margin:0 auto 14px; border-radius:10px;
+    background:var(--green-deep); border:1px solid rgba(34,226,154,.35);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .included-card .ic svg{width:20px; height:20px; stroke:var(--green);}
+  .included-card p{font-size:14px; color:var(--ink-dim); line-height:1.5;}
+  .included-card b{color:var(--ink); display:block; font-size:14.5px; margin-bottom:4px;}
+
+  /* ---------- How it works ---------- */
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:0; position:relative;}
+  .steps::before{
+    content:""; position:absolute; top:26px; left:12%; right:12%; height:1px;
+    background:repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 16px);
+  }
+  .step{position:relative; text-align:center; padding:0 18px;}
+  .step .circ{
+    width:54px; height:54px; border-radius:50%;
+    background:var(--bg); border:2px solid var(--green);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Frank Ruhl Libre'; font-size:20px; font-weight:800; color:var(--green);
+    margin:0 auto 20px; position:relative; z-index:1;
+  }
+  .step h3{font-size:18px; margin-bottom:10px;}
+  .step p{color:var(--ink-dim); font-size:14.5px;}
+
+  /* ---------- Offer box ---------- */
+  .offer-wrap{display:grid; grid-template-columns:1fr; max-width:520px; margin:0 auto;}
+  .offer-card{
+    background:linear-gradient(180deg, var(--bg-card), #0e100e);
+    border:1px solid rgba(34,226,154,.35); border-radius:20px;
+    padding:36px; box-shadow:var(--shadow); position:relative;
+  }
+  .offer-card::before{
+    content:"אימון כניסה"; position:absolute; top:-14px; right:28px;
+    background:var(--green); color:#06140f; font-weight:800; font-size:13px;
+    padding:6px 16px; border-radius:999px;
+  }
+  .offer-line{display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--line); font-size:15px;}
+  .offer-line .label{color:var(--ink-dim);}
+  .offer-line .val{font-weight:700;}
+  .toggle-row{display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line);}
+  .toggle-row .txt{font-size:14.5px;}
+  .toggle-row .txt small{display:block; color:var(--ink-faint); font-size:12.5px; margin-top:2px;}
+  .switch{
+    position:relative; width:48px; height:28px; flex:none; cursor:pointer;
+  }
+  .switch input{opacity:0; width:0; height:0; position:absolute;}
+  .switch .track{
+    position:absolute; inset:0; background:#2a2e2b; border-radius:999px; transition:.2s;
+  }
+  .switch .thumb{
+    position:absolute; top:3px; right:3px; width:22px; height:22px; border-radius:50%;
+    background:var(--ink-dim); transition:.2s;
+  }
+  .switch input:checked + .track{background:var(--green-dim);}
+  .switch input:checked + .track + .thumb{transform:translateX(-20px); background:#06140f;}
+  .offer-total{display:flex; justify-content:space-between; align-items:baseline; padding:22px 0 6px;}
+  .offer-total .label{font-size:15px; color:var(--ink-dim); font-weight:600;}
+  .offer-total .val{font-family:'Frank Ruhl Libre'; font-size:38px; font-weight:800; color:var(--green);}
+  .offer-total .vat{font-size:12px; color:var(--ink-faint); display:block; text-align:left; margin-top:-4px;}
+  .offer-cta{width:100%; margin-top:18px; font-size:16.5px; padding:16px;}
+  .offer-note{
+    margin-top:16px; font-size:13px; color:var(--ink-dim); text-align:center;
+    background:rgba(34,226,154,.06); border:1px solid rgba(34,226,154,.18);
+    border-radius:10px; padding:12px 14px;
+  }
+  .offer-trust{display:flex; justify-content:center; gap:16px; margin-top:16px; flex-wrap:wrap;}
+  .offer-trust span{font-size:12px; color:var(--ink-faint); display:flex; align-items:center; gap:5px;}
+  .offer-trust svg{width:13px; height:13px; stroke:var(--green);}
+
+  /* ---------- Programs ---------- */
+  .prog-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  .prog-card{
+    background:var(--bg-card); border:1px solid var(--line); border-radius:12px; padding:22px;
+  }
+  .prog-card h3{font-size:16.5px; margin-bottom:8px; color:var(--green);}
+  .prog-card p{font-size:13.5px; color:var(--ink-dim);}
+
+  /* ---------- Gallery ---------- */
+  .gallery-strip{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:14px;}
+  .gallery-strip img{
+    width:100%; height:220px; object-fit:cover; border-radius:12px;
+    border:1px solid var(--line);
+  }
+
+  /* ---------- Locations ---------- */
+  .loc-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+  .loc-card{
+    background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px; display:flex; gap:16px; align-items:flex-start;
+  }
+  .loc-card svg{width:26px; height:26px; stroke:var(--green); flex:none;}
+  .loc-card h3{font-size:19px; margin-bottom:6px;}
+  .loc-card p{color:var(--ink-dim); font-size:14.5px;}
+
+  /* ---------- Video testimonials ---------- */
+  .video-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:44px;
+  }
+  .video-card .frame{
+    position:relative; border-radius:16px; overflow:hidden;
+    border:1px solid rgba(34,226,154,.3); box-shadow:var(--shadow);
+    background:#000; aspect-ratio:4/5;
+  }
+  .video-card video{width:100%; height:100%; display:block; object-fit:cover;}
+  .video-card .cap{margin-top:14px; font-size:13.5px; color:var(--ink-dim); text-align:center;}
+  .video-card .cap b{color:var(--ink);}
+  .video-card .tag{
+    position:absolute; top:12px; right:12px; z-index:2;
+    background:rgba(6,20,15,.85); border:1px solid rgba(34,226,154,.4);
+    color:var(--green); font-size:11.5px; font-weight:700;
+    padding:5px 11px; border-radius:999px;
+  }
+  .video-card.empty .frame{
+    display:flex; align-items:center; justify-content:center;
+    border:1px dashed var(--line); background:rgba(255,255,255,.02);
+  }
+  .video-card.empty svg{width:34px; height:34px; stroke:var(--ink-faint);}
+  .video-card.empty .cap{color:var(--ink-faint); font-style:italic;}
+
+  /* ---------- Testimonials placeholder ---------- */
+  .test-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .test-card{
+    border:1px dashed var(--line); border-radius:var(--radius); padding:26px;
+    background:rgba(255,255,255,.015);
+  }
+  .test-card p{color:var(--ink-faint); font-size:14px; font-style:italic; margin-bottom:16px;}
+  .test-card .who{display:flex; align-items:center; gap:10px;}
+  .test-card .avatar{width:36px; height:36px; border-radius:50%; background:var(--line);}
+  .test-card .who b{font-size:13.5px; color:var(--ink-dim); display:block;}
+  .test-card .who span{font-size:11.5px; color:var(--ink-faint);}
+  .test-card.real{
+    border:1px solid rgba(34,226,154,.3); background:var(--bg-card);
+  }
+  .test-card.real p{color:var(--ink); font-style:normal; font-size:14.5px;}
+  .test-card.real .who b{color:var(--ink);}
+  .test-card.real .avatar{background:var(--green-deep); border:1px solid var(--green-dim);}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%; background:none; border:none; color:var(--ink); text-align:right;
+    font-family:'Heebo'; font-size:16.5px; font-weight:600; cursor:pointer;
+    padding:22px 0; display:flex; justify-content:space-between; align-items:center; gap:16px;
+  }
+  .faq-q svg{width:18px; height:18px; stroke:var(--green); flex:none; transition:transform .25s ease;}
+  .faq-item.open .faq-q svg{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .3s ease;}
+  .faq-a p{color:var(--ink-dim); font-size:15px; padding-bottom:22px; max-width:680px;}
+
+  /* ---------- Founder note ---------- */
+  .founder-note{
+    display:grid; grid-template-columns:300px 1fr; gap:44px; align-items:center;
+  }
+  .founder-note .frame{
+    position:relative; border-radius:18px; overflow:hidden; max-width:300px; margin:0 auto;
+    border:1px solid rgba(34,226,154,.3); box-shadow:var(--shadow); background:#000;
+  }
+  .founder-note video{width:100%; display:block; aspect-ratio:9/16; object-fit:cover;}
+  .founder-note .tag{
+    position:absolute; top:12px; right:12px; z-index:2;
+    background:rgba(6,20,15,.85); border:1px solid rgba(34,226,154,.4);
+    color:var(--green); font-size:11.5px; font-weight:700;
+    padding:5px 11px; border-radius:999px;
+  }
+  .founder-note .txt h2{font-size:28px; margin-bottom:14px;}
+  .founder-note .txt p{color:var(--ink-dim); font-size:16px; margin-bottom:10px;}
+  .founder-note .txt cite{
+    display:block; margin-top:16px; font-style:normal; font-size:13.5px; color:var(--green); font-weight:700;
+  }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    text-align:center; border-radius:24px; padding:64px 32px;
+    background:radial-gradient(ellipse 700px 400px at 50% 0%, rgba(34,226,154,.14), transparent 70%), var(--bg-card);
+    border:1px solid var(--line);
+  }
+  .final-cta h2{font-size:34px; margin-bottom:14px;}
+  .final-cta p{color:var(--ink-dim); font-size:17px; max-width:520px; margin:0 auto 30px;}
+
+  /* ---------- Footer ---------- */
+  footer{padding:48px 0 120px; border-top:1px solid var(--line);}
+  .foot-grid{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px;}
+  .foot-brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:16px;}
+  .foot-brand .mark{width:26px; height:26px;}
+  .foot-links{display:flex; gap:22px; flex-wrap:wrap; font-size:13.5px; color:var(--ink-dim);}
+  .foot-links a:hover{color:var(--green);}
+  .foot-note{margin-top:26px; font-size:12px; color:var(--ink-faint); text-align:center;}
+
+  /* ---------- Sticky mobile CTA ---------- */
+  .sticky-cta{
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:rgba(10,11,12,.95); backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);
+    padding:12px 18px; display:none; align-items:center; justify-content:space-between; gap:14px;
+    transform:translateY(100%); transition:transform .3s ease;
+  }
+  .sticky-cta.show{transform:translateY(0);}
+  .sticky-cta .info{font-size:13px;}
+  .sticky-cta .info b{display:block; font-size:16px; color:var(--green); font-family:'Frank Ruhl Libre';}
+
+  /* ---------- WhatsApp float ---------- */
+  .wa-float{
+    position:fixed; bottom:20px; left:20px; z-index:60;
+    width:56px; height:56px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 26px rgba(37,211,102,.4);
+  }
+  .wa-float svg{width:28px; height:28px; fill:#fff;}
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:36px;}
+    .hero p.sub{font-size:17px;}
+    .hero-visual{order:-1; max-width:340px; margin:0 auto;}
+    .pain-grid{grid-template-columns:1fr;}
+    .story-grid{grid-template-columns:1fr;}
+    .story-photo{max-width:280px; margin:0 auto;}
+    .why-grid{grid-template-columns:1fr;}
+    .included-grid{grid-template-columns:1fr 1fr;}
+    .steps{grid-template-columns:1fr; gap:34px;}
+    .steps::before{display:none;}
+    .prog-grid{grid-template-columns:1fr 1fr;}
+    .gallery-strip{grid-template-columns:1fr 1fr;}
+    .gallery-strip img{height:150px;}
+    .loc-grid{grid-template-columns:1fr;}
+    .test-grid{grid-template-columns:1fr;}
+    .video-grid{grid-template-columns:1fr; max-width:320px; margin-inline:auto; margin-bottom:34px;}
+    .founder-note{grid-template-columns:1fr; text-align:center;}
+    .founder-note .txt cite{text-align:center;}
+    section{padding:60px 0;}
+    .section-head h2{font-size:28px;}
+    .header-actions .phone-link{display:none;}
+    .sticky-cta{display:flex;}
+    footer{padding-bottom:150px;}
+    .final-cta{padding:44px 20px;}
+  }
+  @media (max-width:520px){
+    .prog-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:30px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP TRUST BAR ============ -->
+<div class="topbar">פועלים לפי הנחיות <b>משרד הביטחון</b> · צוות מדריכים <b>יוצאי יחידות לוחמה בטרור</b></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="header-inner">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 6L88 24V50C88 71 71 86 50 94C29 86 12 71 12 50V24L50 6Z" stroke="#22e29a" stroke-width="4"/>
+        <circle cx="50" cy="46" r="18" stroke="#22e29a" stroke-width="3"/>
+        <line x1="50" y1="18" x2="50" y2="30" stroke="#22e29a" stroke-width="3"/>
+        <line x1="50" y1="62" x2="50" y2="74" stroke="#22e29a" stroke-width="3"/>
+        <line x1="22" y1="46" x2="32" y2="46" stroke="#22e29a" stroke-width="3"/>
+        <line x1="68" y1="46" x2="78" y2="46" stroke="#22e29a" stroke-width="3"/>
+        <circle cx="50" cy="46" r="4" fill="#22e29a"/>
+      </svg>
+      טוהר הנשק
+    </div>
+    <div class="header-actions">
+      <a class="phone-link" href="tel:0504021111">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        050-402-1111
+      </a>
+      <a href="#offer" class="btn small">קביעת אימון כניסה</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+        אימון כניסה · בעלות סמלית
+      </span>
+      <h1>תוך אימון אחד<br>תרגיש <span class="hl">הבדל אמיתי</span> בשליטה בנשק שלך</h1>
+      <p class="sub">אימון עם צוות מדריכים יוצאי יחידות לוחמה בטרור, לבעלי רישיון נשק. הדרכה עם ניסיון מבצעי, התאמה אישית לכל מתאמן — והכל בגובה העיניים.</p>
+      <div class="hero-cta-row">
+        <a href="#offer" class="btn">קובעים אימון כניסה — 375 ₪</a>
+        <a href="#included" class="btn ghost">מה כולל האימון?</a>
+      </div>
+      <p class="hero-micro">🎁 האימון ניתן <b>במתנה מלאה</b> אם תבחרו להמשיך למסלול המלא — ללא שום התחייבות להמשך</p>
+      <div class="hero-badges">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          לפי הנחיות משרד הביטחון
+        </div>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+          יוצאי יחידות לוחמה בטרור
+        </div>
+      </div>
+      <div class="hero-location">📍 <b>מיקום:</b> הרצליה · עזריקם (ליד אשדוד)</div>
+    </div>
+    <div class="hero-visual reveal">
+      <img src="assets/training-hero.jpg" alt="אימון ירי בטוהר הנשק">
+      <div class="price-float">
+        <div class="num">375 ₪</div>
+        <div class="lbl">אימון כניסה</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAIN POINTS ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">מכיר את התחושה?</span>
+      <h2>יש לך נשק — אבל אין לך שליטה אמיתית בו</h2>
+      <p>אלה הדברים שרוב בעלי הרישיון לא אומרים בקול, אבל חושבים עליהם</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <p>"יש לי רישיון ונשק בבית — אבל אם אני לא יודע להשתמש בו כמו שצריך, עדיף שהוא יישאר בכספת."</p>
+      </div>
+      <div class="pain-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <p>"לא לימדו אותי באופן אישי איך לתפעל מעצור בנשק בעת ירי — ולא רק מול שולחן במטווח."</p>
+      </div>
+      <div class="pain-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <p>"אני לא זוכר/ת מתי בפעם האחרונה תרגלתי משהו שבאמת מדמה מציאות."</p>
+      </div>
+      <div class="pain-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <p>"המחשבה על תרחיש אמיתי, ומה אני בכלל אמור לעשות — מלחיצה אותי."</p>
+      </div>
+    </div>
+    <p class="agitation reveal">נשק בלי שליטה אמיתית הוא לא ביטחון — <span class="hl">הוא סיכון נוסף.</span><br>וזה בדיוק מה שאנחנו באים לפתור, אימון אחד בכל פעם.</p>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="section-alt">
+  <div class="wrap story-grid">
+    <div class="story-photo reveal">
+      <img src="assets/tohar-portrait.jpg" alt="טוהר, מייסד ומדריך ראשי בטוהר הנשק" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 12%;">
+    </div>
+    <div class="story-text reveal">
+      <span class="eyebrow">מי מאחורי טוהר הנשק</span>
+      <h2>לא עוד "מדריך במטווח" — צוות שבאמת מכיר לחימה</h2>
+      <p>טוהר הנשק היא קבוצת מאמנים <b style="color:var(--ink)">יוצאי יחידות לוחמה בטרור</b>, המתמחה בתפעול נשק קצר וארוך. אנחנו מדריכים אזרחים בעלי רישיון, אנשי ביטחון וחיילי צה"ל — ברמה הגבוהה ביותר, ופועלים בהתאם להנחיות משרד הביטחון.</p>
+      <p>אתה לא עוד מספר בקבוצה. כל אימון נבנה סביב הרמה, הקצב והמטרות שלך באופן אישי — כדי שתצא עם ביטחון אמיתי, לא רק עם "עוד תרגול".</p>
+      <div class="quote-box">
+        "הדרכה בגובה העיניים, ביחס מכבד ואנושי — עם התאמה אישית לכל יורה. זו לא סיסמה, זו הדרך שאנחנו מלמדים בה."
+        <cite>— טוהר, מייסד ומדריך ראשי</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">למה דווקא אצלנו</span>
+      <h2>שלושה דברים שמרגישים אחרת כבר באימון הראשון</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="num">01</div>
+        <h3>יחס אישי וליווי צמוד</h3>
+        <p>מכירים את החוזקות והחולשות שלך, ונותנים דגשים מדויקים שמביאים התקדמות אמיתית.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">02</div>
+        <h3>התאמה אישית שמביאה תוצאות</h3>
+        <p>מתאימים את הקצב והרמה בדיוק אליך, כדי שתשלוט בנשק בצורה הבטוחה, המהירה והיעילה ביותר, עם ביטחון אמיתי!</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">03</div>
+        <h3>אווירה מכבדת, בגובה העיניים</h3>
+        <p>לומדים יחד, בקצב שמתאים לך, עם תחושת ביטחון שמאפשרת להתפתח באמת.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INCLUDED ============ -->
+<section id="included">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">מה כולל האימון</span>
+      <h2>מה בדיוק מחכה לכם באימון הכניסה</h2>
+    </div>
+    <div class="included-grid">
+      <div class="included-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <b>2–3 שעות</b>
+        <p>אימון כניסה מלא, לא "טעימה" קצרה</p>
+      </div>
+      <div class="included-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="9" r="2.7"/><path d="M15.5 13.3c2.4.4 4 2.2 4 4.7"/></svg></div>
+        <b>קבוצות קטנות</b>
+        <p>יחס אישי לכל יורה, לא עוד אימון המוני</p>
+      </div>
+      <div class="included-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg></div>
+        <b>יבש + רטוב</b>
+        <p>תרגול יבש לבניית הרגלים, ואימון רטוב עם תחמושת</p>
+      </div>
+      <div class="included-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".5" fill="currentColor"/></svg></div>
+        <b>דיוק, אחיזה, מיכוון</b>
+        <p>ותרגול נהלי בטיחות מלאים לכל אורך הדרך</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">איך זה עובד</span>
+      <h2>אימון כניסה אחד. אפס סיכון. החלטה מושכלת.</h2>
+      <p>ה-375 ₪ שאתה משלם היום מתקזזים במלואם אם תבחר להמשיך למסלול המלא</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="circ">1</div>
+        <h3>קובעים אימון כניסה</h3>
+        <p>אימון כניסה קבוצתי בליווי אישי צמוד לכל יורה — הזדמנות גם בשבילכם להכיר אותנו, וגם בשבילנו להכיר אתכם ולוודא שההתאמה נכונה משני הצדדים.</p>
+      </div>
+      <div class="step reveal">
+        <div class="circ">2</div>
+        <h3>מתנסים, ומקבלים חוות דעת אמיתית</h3>
+        <p>בסוף האימון תדע בדיוק איפה אתה עומד — ואם המסלול המלא מתאים לך.</p>
+      </div>
+      <div class="step reveal">
+        <div class="circ">3</div>
+        <h3>ממשיכים? האימון כניסה על חשבוננו</h3>
+        <p>עוברים למסלול המלא (3 מפגשים, 1,850 ₪) ומשלימים רק <b style="color:var(--green)">1,475 ₪</b> נוספים — ה-375 ₪ כבר מקוזזים. לא ממשיכים? אין שום בעיה, האימון עומד בפני עצמו.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFER ============ -->
+<section id="offer">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">התחלה ללא סיכון</span>
+      <h2>שריינו את אימון הכניסה שלכם</h2>
+      <p>בחרו אם להוסיף תחמושת מראש — נוח, מהיר, בלי לעצור לקנות במטווח</p>
+    </div>
+    <div class="offer-wrap reveal">
+      <div class="offer-card">
+        <div class="offer-line">
+          <span class="label">אימון כניסה · הדרכה עם ניסיון מבצעי</span>
+          <span class="val">375 ₪</span>
+        </div>
+        <div class="toggle-row">
+          <div class="txt">
+            הוספת תחמושת (50 כדורים)
+            <small>נחסך לך עצירה בקופת המטווח</small>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="ammoToggle">
+            <span class="track"></span>
+            <span class="thumb"></span>
+          </label>
+        </div>
+        <div class="offer-total">
+          <span class="label">סה"כ לתשלום</span>
+          <span><span class="val" id="totalPrice">375 ₪</span><span class="vat">כולל מע״מ</span></span>
+        </div>
+        <a href="#" id="ctaButton" class="btn offer-cta" target="_blank" rel="noopener">לתפיסת מקום ותשלום מאובטח</a>
+        <div class="offer-note">🎁 <b>האימון ניתן במתנה מלאה</b> אם תבחרו להמשיך למסלול המלא (1,850 ₪ / 3 מפגשים) — תשלימו רק 1,475 ₪ נוספים. ללא שום התחייבות להמשך.</div>
+        <div class="offer-trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> תשלום מאובטח</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> לפי משרד הביטחון</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> הרצליה + עזריקם</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAMS ============ -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">מה קורה אחרי אימון הכניסה</span>
+      <h2>המסלולים המלאים שממתינים לכם</h2>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-card reveal"><h3>מסלול ירי משולב</h3><p>הטמעת הרגלים נכונים עם הנשק, שליטה מלאה, בטיחות ותרגול תרחישים.</p></div>
+      <div class="prog-card reveal"><h3>מסלול מנוי</h3><p>אימון פעם בחודש לשמירה על הכשירות, תכנית מותאמת לרמה שלך, ובכל מפגש תכנים חדשים ומאתגרים.</p></div>
+      <div class="prog-card reveal"><h3>אימון טכני</h3><p>חידוד הבסיס — עמידה, אחיזה, תמונת כוונות ועבודת הדק, גם למנוסים.</p></div>
+      <div class="prog-card reveal"><h3>אימון מעצורים</h3><p>הכרת כלל המעצורים באקדח, זיהוי ותפעול נכון תחת לחץ.</p></div>
+      <div class="prog-card reveal"><h3>אימון מחסות</h3><p>עקרונות לחימה מאחורי מחסה ומסתור, בסביבה לא סטרילית.</p></div>
+      <div class="prog-card reveal"><h3>אימון אישי</h3><p>יחס אישי מקסימלי — תוכנית מותאמת במיוחד עבורך.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">מהשטח</span>
+      <h2>ככה נראה אימון אצלנו</h2>
+    </div>
+    <div class="gallery-strip reveal">
+      <img src="assets/training-4.jpg" alt="אימון ירי בטוהר הנשק" loading="lazy">
+      <img src="assets/training-2.jpg" alt="הדרכה צמודה בטוהר הנשק" loading="lazy">
+      <img src="assets/training-6.jpg" alt="אימון בשטח פתוח בטוהר הנשק" loading="lazy">
+      <img src="assets/training-3.jpg" alt="הדרכה אישית בטוהר הנשק" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATIONS ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">המטווחים שלנו</span>
+      <h2>איפה מתאמנים</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><h3>הרצליה · המטווח האולימפי – להב</h3><p>נגיש ברגל מהרכבת, עם חניה חינם ונרחבת בתוך מתחם המטווח.</p></div>
+      </div>
+      <div class="loc-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><h3>עזריקם (ליד אשדוד)</h3><p>מטווח פתוח ביער עזריקם, עם חניה חינם ובשפע בתוך המתחם.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS (placeholder slots) ============ -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">מה אומרים המתאמנים</span>
+      <h2>מתאמנים אמיתיים, במילים שלהם</h2>
+      <p>מתאמנים שכתבו לנו במילים שלהם, בלי עריכה</p>
+    </div>
+    <div class="video-grid reveal">
+      <div class="video-card">
+        <div class="frame">
+          <span class="tag">▶ וידאו</span>
+          <video controls preload="none" poster="assets/testimonial-yaniv-poster.jpg">
+            <source src="assets/testimonial-yaniv.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="cap"><b>יניב אלמגור</b> · מתאמן, טוהר הנשק</p>
+      </div>
+      <div class="video-card empty">
+        <div class="frame">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        </div>
+        <p class="cap">מקום למתאמן נוסף — יתעדכן</p>
+      </div>
+      <div class="video-card empty">
+        <div class="frame">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        </div>
+        <p class="cap">מקום למתאמן נוסף — יתעדכן</p>
+      </div>
+    </div>
+    <div class="test-grid">
+      <div class="test-card real reveal"><p>"היה משמעותי ומלמד מאוד! נתת לנו יסודות חשובים וכל דבר שנצטרך לעשות עם הנשק כבר לא יהיה 'הפעם הראשונה', אז נהיה הרבה יותר מוכנים. עכשיו אני מרגיש ביטחון הרבה יותר גדול בנשק וזה ממש חשוב."</p><div class="who"><div class="avatar"></div><div><b>שלומי רייך</b><span>מתאמן, טוהר הנשק</span></div></div></div>
+      <div class="test-card real reveal"><p>"הרבה תודה על הדרכה מדהימה, יש בך שילוב יפה של: מקצועיות, הבנת מצבים, זריזות פיזית ומחשבתית, וגישה לאנשים ונועם ההליכות. מקווה שניפגש בעתיד להמשך אימונים."</p><div class="who"><div class="avatar"></div><div><b>חגי אביתר</b><span>מתאמן, טוהר הנשק</span></div></div></div>
+      <div class="test-card real reveal"><p>"הצלחת לבנות הכשרה מאורגנת, ברורה, בנויה נדבך על נדבך, מקצועית, חשובה ומעשירה. האימון נתן כלים, דגשים, וביטחון בתפעול מצבים שונים. תודה רבה על המקצועיות, הסבלנות, והיחס האישי לכל אחד בקבוצה."</p><div class="who"><div class="avatar"></div><div><b>אביבית שוהם</b><span>מתאמנת, טוהר הנשק</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head reveal">
+      <span class="eyebrow">שאלות נפוצות</span>
+      <h2>כל מה שרצית לדעת לפני שקובעים</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">אני בכלל לא מנוסה, זה מתאים לי?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a"><p>בהחלט. אימון הכניסה בנוי גם למי שמעולם לא ירה וגם למי שכבר מנוסה — הכל מתחיל מהערכת רמה אישית.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">אני חייב רישיון נשק בתוקף כדי להגיע?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a"><p>כן, כל האימונים מיועדים לבעלי רישיון נשק תקף בלבד.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">מה אם אחרי אימון הכניסה אני לא רוצה להמשיך?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a"><p>לגמרי בסדר. אימון הכניסה הוא מפגש שלם ועצמאי בפני עצמו — אין שום התחייבות להמשך למסלול המלא.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">התחמושת כלולה במחיר?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a"><p>375 ₪ מכסה את ההדרכה ועלות המטווח. ניתן להוסיף מראש 50 כדורי תחמושת (125 ₪) ישירות בעת ההרשמה, כדי לא לעצור לקנות במטווח.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">מה להביא איתי לאימון?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a"><p>נשק, רישיון נשק בתוקף ותעודה מזהה (פיזית). מומלץ להגיע עם אוזניות ומשקפי מגן אישיים (ניתן גם לרכוש דרכנו מראש) — ובעיקר, לבוא עם חיוך.<br><strong style="color:var(--amber)">חשוב: מי שיגיע ללא רישיון נשק ותעודה מזהה פיזית לא יוכל להשתתף באימון, והתשלום לא יוחזר.</strong></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">מה קוד הלבוש לאימון?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a"><p>חולצה קצרה או ארוכה. מכנס קצר עד גובה הברכיים מותר. נעליים סגורות — חובה.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">האם האימון מהווה חידוש רישיון רשמי?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a"><p>לא. זהו אימון מעשי ורענון מקצועי בלבד, ואינו מחליף חידוש רישיון מול הרשויות המוסמכות.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">איפה בדיוק מתקיימים האימונים?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a"><p>במטווחים בהרצליה ובעזריקם (ליד אשדוד). בוחרים את המיקום הנוח לכם בתיאום מראש בוואטסאפ או בטלפון.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER NOTE ============ -->
+<section>
+  <div class="wrap">
+    <div class="founder-note reveal">
+      <div class="frame">
+        <span class="tag">▶ מסר אישי</span>
+        <video controls preload="none" poster="assets/founder-video-poster.jpg">
+          <source src="assets/founder-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="txt">
+        <span class="eyebrow">לפני שאתם ממשיכים</span>
+        <h2>כמה מילים ממני, באופן אישי</h2>
+        <p>אם הגעתם עד לכאן, כנראה שגם אתם מרגישים את זה — ואני רוצה שתשמעו את זה ממני, לא רק תקראו את זה.</p>
+        <cite>— טוהר, מייסד ומדריך ראשי</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section>
+  <div class="wrap">
+    <div class="final-cta reveal">
+      <span class="eyebrow">עדיין מהסס?</span>
+      <h2>פעם אחת, בעלות סמלית — ותדע בדיוק איפה אתה עומד</h2>
+      <p>אימון כניסה עם יוצאי יחידות לוחמה בטרור, ויחס אישי לכל מתאמן. ללא התחייבות, עם אפשרות מלאה להמשיך במתנה.</p>
+      <a href="#offer" class="btn">קובעים אימון כניסה — 375 ₪</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 6L88 24V50C88 71 71 86 50 94C29 86 12 71 12 50V24L50 6Z" stroke="#22e29a" stroke-width="4"/>
+          <circle cx="50" cy="46" r="4" fill="#22e29a"/>
+        </svg>
+        טוהר הנשק
+      </div>
+      <div class="foot-links">
+        <a href="tel:0504021111">050-402-1111</a>
+        <a href="mailto:toharhaneshek@gmail.com">toharhaneshek@gmail.com</a>
+        <a href="https://www.instagram.com/tohar_haneshek/" target="_blank" rel="noopener">אינסטגרם</a>
+        <a href="https://www.facebook.com/ToharHaneshek" target="_blank" rel="noopener">פייסבוק</a>
+      </div>
+    </div>
+    <p class="foot-note">© טוהר הנשק · הדרכה בהתאם להנחיות משרד הביטחון · כל הזכויות שמורות</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CTA ============ -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="info">אימון כניסה<b id="stickyPrice">375 ₪</b></div>
+  <a href="#offer" class="btn small">לתפיסת מקום</a>
+</div>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a class="wa-float" href="https://wa.me/972504021111?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%90%D7%99%D7%9E%D7%95%D7%9F%20%D7%94%D7%9B%D7%A0%D7%99%D7%A1%D7%94" target="_blank" rel="noopener" aria-label="וואטסאפ">
+  <svg viewBox="0 0 32 32"><path d="M16.01 2.4C8.55 2.4 2.5 8.45 2.5 15.91c0 2.62.73 5.06 1.99 7.15L2 29.6l6.7-2.4a13.44 13.44 0 0 0 7.3 2.13c7.46 0 13.51-6.05 13.51-13.51S23.47 2.4 16.01 2.4zm0 24.6c-2.3 0-4.44-.68-6.23-1.85l-.45-.27-4.15 1.49 1.42-4.14-.29-.43a11.02 11.02 0 0 1-1.9-6.19c0-6.1 4.95-11.05 11.06-11.05 6.1 0 11.05 4.95 11.05 11.05S22.11 27 16.01 27zm6.14-8.28c-.34-.17-2-.98-2.31-1.1-.31-.11-.53-.17-.76.17-.22.34-.86 1.1-1.06 1.32-.2.23-.39.26-.73.09-.34-.17-1.43-.53-2.72-1.68-1.01-.9-1.68-2-1.88-2.34-.2-.34-.02-.52.15-.69.15-.15.34-.39.51-.59.17-.2.22-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.76-1.84-1.05-2.52-.28-.66-.56-.57-.76-.58-.2-.01-.43-.01-.65-.01-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.86 0 1.69 1.23 3.32 1.4 3.55.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.82 2.31-1.62.28-.79.28-1.47.2-1.62-.09-.14-.31-.23-.65-.4z"/></svg>
+</a>
+
+<script>
+  // ---- Offer toggle: ammo add-on ----
+  const PAY_LINKS = {
+    base:     "https://pay.hyp.co.il/cgi-bin/yaadpay/yaadpay3ds.pl?Amount=375&Coin=1&FixTash=True&Info=%E0%E9%EE%E5%EF%20%EB%F0%E9%F1%E4_%20%EC%E0%20%EB%E5%EC%EC%20%FA%E7%EE%E5%F9%FA&Masof=4501995538&MoreData=True&PageLang=HEB&Postpone=False&SendHesh=True&ShowEngTashText=True&Tash=1&UTF8out=True&action=pay&freq=1&sendemail=True&tmp=3&signature=2841b312b7975489c812af8e0aacffee1e0c2029c6b663464042c1a39e5c2416",
+    withAmmo: "https://pay.hyp.co.il/cgi-bin/yaadpay/yaadpay3ds.pl?Amount=500&Coin=1&FixTash=True&Info=%E0%E9%EE%E5%EF%20%EB%F0%E9%F1%E4_%EB%E5%EC%EC%20%FA%E7%EE%E5%F9%FA&Masof=4501995538&MoreData=True&PageLang=HEB&Postpone=False&SendHesh=True&ShowEngTashText=True&Tash=1&UTF8out=True&action=pay&freq=1&sendemail=True&tmp=3&signature=96fe1369039beaafccb68455525d579127fe551e88eb84f7f0038281f695865f"
+  };
+
+  const ammoToggle = document.getElementById('ammoToggle');
+  const totalPrice = document.getElementById('totalPrice');
+  const stickyPrice = document.getElementById('stickyPrice');
+  const ctaButton = document.getElementById('ctaButton');
+
+  function updateOffer(){
+    const withAmmo = ammoToggle.checked;
+    const price = withAmmo ? "500 ₪" : "375 ₪";
+    totalPrice.textContent = price;
+    stickyPrice.textContent = price;
+    ctaButton.href = withAmmo ? PAY_LINKS.withAmmo : PAY_LINKS.base;
+  }
+  ammoToggle.addEventListener('change', updateOffer);
+  updateOffer();
+
+  // ---- FAQ accordion ----
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o => {
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // ---- Sticky mobile CTA reveal ----
+  const stickyCta = document.getElementById('stickyCta');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 400){ stickyCta.classList.add('show'); }
+    else{ stickyCta.classList.remove('show'); }
+  }, {passive:true});
+
+  // ---- Reveal on scroll ----
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
