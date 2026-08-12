@@ -29,11 +29,12 @@
     --shadow: 0 20px 60px rgba(0,0,0,.45);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth; max-width:100%; overflow-x:hidden;}
   body{
     background:var(--bg);
     color:var(--ink);
     font-family:'Heebo', sans-serif;
+    max-width:100%;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
@@ -489,6 +490,8 @@
     .section-head h2{font-size:28px;}
     .header-actions .phone-link{display:none;}
     .sticky-cta{display:flex;}
+    .wa-float{bottom:92px; width:50px; height:50px;}
+    .wa-float svg{width:24px; height:24px;}
     footer{padding-bottom:150px;}
     .final-cta{padding:44px 20px;}
   }
@@ -806,11 +809,14 @@
         </div>
         <p class="cap"><b>יניב אלמגור</b> · מתאמן, טוהר הנשק</p>
       </div>
-      <div class="video-card empty">
+      <div class="video-card">
         <div class="frame">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          <span class="tag">▶ וידאו</span>
+          <video controls preload="none" poster="assets/testimonial-barak-poster.jpg">
+            <source src="assets/testimonial-barak.mp4" type="video/mp4">
+          </video>
         </div>
-        <p class="cap">מקום למתאמן נוסף — יתעדכן</p>
+        <p class="cap"><b>ברק</b> · מתאמן, טוהר הנשק</p>
       </div>
       <div class="video-card empty">
         <div class="frame">
