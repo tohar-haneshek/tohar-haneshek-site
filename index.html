@@ -178,9 +178,10 @@
     background:var(--bg-card); border:1px solid var(--line);
     border-radius:12px; padding:14px 18px;
     display:flex; align-items:center; gap:12px;
-    box-shadow:var(--shadow);
+    box-shadow:var(--shadow); text-decoration:none; transition:transform .15s;
   }
-  .hero-visual .price-float .num{font-family:'Frank Ruhl Libre'; font-size:26px; font-weight:800; color:var(--green);}
+  .hero-visual .price-float:hover{transform:translateY(-2px);}
+  .hero-visual .price-float .num{font-family:'Frank Ruhl Libre'; font-size:20px; font-weight:800; color:var(--green);}
   .hero-visual .price-float .lbl{font-size:12px; color:var(--ink-dim);}
 
   section{padding:88px 0;}
@@ -518,7 +519,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         050-402-1111
       </a>
-      <a href="#offer" class="btn small">קביעת אימון כניסה</a>
+      <a href="https://toharhaneshek.com/elementor-564/" class="btn small" target="_blank" rel="noopener">קביעת אימון כניסה</a>
     </div>
   </div>
 </header>
@@ -534,7 +535,7 @@
       <h1>תוך אימון אחד<br>תרגיש <span class="hl">הבדל אמיתי</span> בשליטה בנשק שלך</h1>
       <p class="sub">אימון עם צוות מדריכים יוצאי יחידות לוחמה בטרור, לבעלי רישיון נשק. הדרכה עם ניסיון מבצעי, התאמה אישית לכל מתאמן — והכל בגובה העיניים.</p>
       <div class="hero-cta-row">
-        <a href="#offer" class="btn">קובעים אימון כניסה — 375 ₪</a>
+        <a href="https://toharhaneshek.com/elementor-564/" class="btn" target="_blank" rel="noopener">קובעים אימון כניסה</a>
         <a href="#included" class="btn ghost">מה כולל האימון?</a>
       </div>
       <p class="hero-micro">🎁 האימון ניתן <b>במתנה מלאה</b> אם תבחרו להמשיך למסלול המלא — ללא שום התחייבות להמשך</p>
@@ -552,10 +553,10 @@
     </div>
     <div class="hero-visual reveal">
       <img src="assets/training-hero.jpg" alt="אימון ירי בטוהר הנשק">
-      <div class="price-float">
-        <div class="num">375 ₪</div>
+      <a href="https://toharhaneshek.com/elementor-564/" class="price-float" target="_blank" rel="noopener">
+        <div class="num">קביעת אימון</div>
         <div class="lbl">אימון כניסה</div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -691,47 +692,6 @@
         <div class="circ">3</div>
         <h3>ממשיכים? האימון כניסה על חשבוננו</h3>
         <p>עוברים למסלול המלא (3 מפגשים, 1,850 ₪) ומשלימים רק <b style="color:var(--green)">1,475 ₪</b> נוספים — ה-375 ₪ כבר מקוזזים. לא ממשיכים? אין שום בעיה, האימון עומד בפני עצמו.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ OFFER ============ -->
-<section id="offer">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">התחלה ללא סיכון</span>
-      <h2>שריינו את אימון הכניסה שלכם</h2>
-      <p>בחרו אם להוסיף תחמושת מראש — נוח, מהיר, בלי לעצור לקנות במטווח</p>
-    </div>
-    <div class="offer-wrap reveal">
-      <div class="offer-card">
-        <div class="offer-line">
-          <span class="label">אימון כניסה · הדרכה עם ניסיון מבצעי</span>
-          <span class="val">375 ₪</span>
-        </div>
-        <div class="toggle-row">
-          <div class="txt">
-            הוספת תחמושת (50 כדורים)
-            <small>נחסך לך עצירה בקופת המטווח</small>
-          </div>
-          <label class="switch">
-            <input type="checkbox" id="ammoToggle">
-            <span class="track"></span>
-            <span class="thumb"></span>
-          </label>
-        </div>
-        <div class="offer-total">
-          <span class="label">סה"כ לתשלום</span>
-          <span><span class="val" id="totalPrice">375 ₪</span><span class="vat">כולל מע״מ</span></span>
-        </div>
-        <a href="#" id="ctaButton" class="btn offer-cta" target="_blank" rel="noopener">לתפיסת מקום ותשלום מאובטח</a>
-        <div class="offer-note">🎁 <b>האימון ניתן במתנה מלאה</b> אם תבחרו להמשיך למסלול המלא (1,850 ₪ / 3 מפגשים) — תשלימו רק 1,475 ₪ נוספים. ללא שום התחייבות להמשך.</div>
-        <div class="offer-trust">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> תשלום מאובטח</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> לפי משרד הביטחון</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> הרצליה + עזריקם</span>
-        </div>
       </div>
     </div>
   </div>
@@ -907,7 +867,7 @@
       <span class="eyebrow">עדיין מהסס?</span>
       <h2>פעם אחת, בעלות סמלית — ותדע בדיוק איפה אתה עומד</h2>
       <p>אימון כניסה עם יוצאי יחידות לוחמה בטרור, ויחס אישי לכל מתאמן. ללא התחייבות, עם אפשרות מלאה להמשיך במתנה.</p>
-      <a href="#offer" class="btn">קובעים אימון כניסה — 375 ₪</a>
+      <a href="https://toharhaneshek.com/elementor-564/" class="btn" target="_blank" rel="noopener">קובעים אימון כניסה</a>
     </div>
   </div>
 </section>
@@ -936,8 +896,8 @@
 
 <!-- ============ STICKY MOBILE CTA ============ -->
 <div class="sticky-cta" id="stickyCta">
-  <div class="info">אימון כניסה<b id="stickyPrice">375 ₪</b></div>
-  <a href="#offer" class="btn small">לתפיסת מקום</a>
+  <div class="info">אימון כניסה</div>
+  <a href="https://toharhaneshek.com/elementor-564/" class="btn small" target="_blank" rel="noopener">קביעת אימון כניסה</a>
 </div>
 
 <!-- ============ WHATSAPP FLOAT ============ -->
@@ -946,27 +906,6 @@
 </a>
 
 <script>
-  // ---- Offer toggle: ammo add-on ----
-  const PAY_LINKS = {
-    base:     "https://pay.hyp.co.il/cgi-bin/yaadpay/yaadpay3ds.pl?Amount=375&Coin=1&FixTash=True&Info=%E0%E9%EE%E5%EF%20%EB%F0%E9%F1%E4_%20%EC%E0%20%EB%E5%EC%EC%20%FA%E7%EE%E5%F9%FA&Masof=4501995538&MoreData=True&PageLang=HEB&Postpone=False&SendHesh=True&ShowEngTashText=True&Tash=1&UTF8out=True&action=pay&freq=1&sendemail=True&tmp=3&signature=2841b312b7975489c812af8e0aacffee1e0c2029c6b663464042c1a39e5c2416",
-    withAmmo: "https://pay.hyp.co.il/cgi-bin/yaadpay/yaadpay3ds.pl?Amount=500&Coin=1&FixTash=True&Info=%E0%E9%EE%E5%EF%20%EB%F0%E9%F1%E4_%EB%E5%EC%EC%20%FA%E7%EE%E5%F9%FA&Masof=4501995538&MoreData=True&PageLang=HEB&Postpone=False&SendHesh=True&ShowEngTashText=True&Tash=1&UTF8out=True&action=pay&freq=1&sendemail=True&tmp=3&signature=96fe1369039beaafccb68455525d579127fe551e88eb84f7f0038281f695865f"
-  };
-
-  const ammoToggle = document.getElementById('ammoToggle');
-  const totalPrice = document.getElementById('totalPrice');
-  const stickyPrice = document.getElementById('stickyPrice');
-  const ctaButton = document.getElementById('ctaButton');
-
-  function updateOffer(){
-    const withAmmo = ammoToggle.checked;
-    const price = withAmmo ? "500 ₪" : "375 ₪";
-    totalPrice.textContent = price;
-    stickyPrice.textContent = price;
-    ctaButton.href = withAmmo ? PAY_LINKS.withAmmo : PAY_LINKS.base;
-  }
-  ammoToggle.addEventListener('change', updateOffer);
-  updateOffer();
-
   // ---- FAQ accordion ----
   document.querySelectorAll('.faq-item').forEach(item => {
     const q = item.querySelector('.faq-q');
