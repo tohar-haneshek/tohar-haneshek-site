@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>טוהר הנשק | אימון כניסה אישי לבעלי רישיון נשק</title>
 <meta name="description" content="אימון כניסה אישי עם יוצאי יחידות לוחמה בטרור. הרצליה ועזריקם. תפעול נשק, ביטחון עצמי ושליטה אמיתית — לפי הנחיות משרד הביטחון.">
+
+<!-- ============ META PIXEL ============ -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '957436256732522');
+fbq('track', 'PageView');
+</script>
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
@@ -433,6 +447,13 @@
   .final-cta p{color:var(--ink-dim); font-size:17px; max-width:520px; margin:0 auto 30px;}
   .final-note{margin-top:20px; font-size:13.5px; color:var(--ink-dim); max-width:440px; margin-left:auto; margin-right:auto;}
   .final-note b{color:var(--ink);}
+  .license-gate{
+    display:flex; align-items:flex-start; gap:10px; text-align:right;
+    max-width:440px; margin:0 auto 22px; font-size:14px; color:var(--ink-dim);
+    cursor:pointer; line-height:1.5;
+  }
+  .license-gate input{width:19px; height:19px; margin-top:2px; accent-color:var(--green); cursor:pointer; flex-shrink:0;}
+  .btn.is-disabled{opacity:.4; pointer-events:none; cursor:not-allowed;}
 
   /* ---------- Footer ---------- */
   footer{padding:48px 0 120px; border-top:1px solid var(--line);}
@@ -869,7 +890,11 @@
       <span class="eyebrow">עדיין מהסס?</span>
       <h2>פעם אחת, בעלות סמלית — ותדע בדיוק איפה אתה עומד</h2>
       <p>אימון כניסה עם יוצאי יחידות לוחמה בטרור, ויחס אישי לכל מתאמן. ללא התחייבות, עם אפשרות מלאה להמשיך במתנה.</p>
-      <a href="https://toharhaneshek.com/elementor-564/" class="btn" target="_blank" rel="noopener">קובעים אימון כניסה</a>
+      <label class="license-gate">
+        <input type="checkbox" id="license-confirm">
+        אני בעל רישיון נשק תקף ומחזיק בנשק בפועל (לא רק אישור עקרוני/מותנה)
+      </label>
+      <a href="https://toharhaneshek.com/elementor-564/" id="finalCtaBtn" class="btn is-disabled" target="_blank" rel="noopener" aria-disabled="true">קובעים אימון כניסה</a>
       <div class="final-note">🎁 <b>האימון ניתן במתנה מלאה</b> אם תבחרו להמשיך למסלול המלא (1,850 ₪ / 3 מפגשים) — תשלימו רק 1,475 ₪ נוספים. ללא שום התחייבות להמשך.</div>
     </div>
   </div>
@@ -880,10 +905,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 6L88 24V50C88 71 71 86 50 94C29 86 12 71 12 50V24L50 6Z" stroke="#22e29a" stroke-width="4"/>
-          <circle cx="50" cy="46" r="4" fill="#22e29a"/>
-        </svg>
+        <img class="mark" src="assets/logo-mark.png" alt="טוהר הנשק" width="26" height="26" style="border-radius:5px;">
         טוהר הנשק
       </div>
       <div class="foot-links">
@@ -909,6 +931,31 @@
 </a>
 
 <script>
+  // ---- License gate + Meta Pixel events ----
+  const licenseCheckbox = document.getElementById('license-confirm');
+  const finalCtaBtn = document.getElementById('finalCtaBtn');
+  if(licenseCheckbox && finalCtaBtn){
+    licenseCheckbox.addEventListener('change', () => {
+      if(licenseCheckbox.checked){
+        finalCtaBtn.classList.remove('is-disabled');
+        finalCtaBtn.removeAttribute('aria-disabled');
+        if(typeof fbq !== 'undefined'){ fbq('trackCustom', 'LicenseConfirmed'); }
+      } else {
+        finalCtaBtn.classList.add('is-disabled');
+        finalCtaBtn.setAttribute('aria-disabled', 'true');
+      }
+    });
+    finalCtaBtn.addEventListener('click', (e) => {
+      if(!licenseCheckbox.checked){
+        e.preventDefault();
+        return;
+      }
+      if(typeof fbq !== 'undefined'){
+        fbq('track', 'InitiateCheckout', { value: 375, currency: 'ILS' });
+      }
+    });
+  }
+
   // ---- FAQ accordion ----
   document.querySelectorAll('.faq-item').forEach(item => {
     const q = item.querySelector('.faq-q');
