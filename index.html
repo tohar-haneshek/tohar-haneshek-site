@@ -495,17 +495,7 @@ fbq('track', 'PageView');
     color:var(--ink-dim); line-height:1.7;
   }
   .prog-oneliner a{color:var(--green); text-decoration:underline;}
-  .fit-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
-  .fit-col{background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius); padding:28px;}
-  .fit-col.yes{border-color:rgba(34,226,154,.35);}
-  .fit-col h3{font-size:17px; margin-bottom:18px; display:flex; align-items:center; gap:8px;}
-  .fit-col ul{list-style:none; display:flex; flex-direction:column; gap:13px; padding:0; margin:0;}
-  .fit-col li{display:flex; align-items:flex-start; gap:10px; font-size:14.5px; color:var(--ink-dim); line-height:1.5;}
-  .fit-col.yes li svg{color:var(--green); flex-shrink:0; margin-top:2px;}
-  .fit-col.no li svg{color:var(--ink-faint); flex-shrink:0; margin-top:2px;}
-
   @media (max-width:860px){
-    .fit-grid{grid-template-columns:1fr;}
     .hero-grid{grid-template-columns:1fr;}
     .hero h1{font-size:36px;}
     .hero p.sub{font-size:17px;}
@@ -768,63 +758,6 @@ fbq('track', 'PageView');
         <h2>כמה מילים ממני, באופן אישי</h2>
         <p>אם הגעתם עד לכאן, כנראה שגם אתם מרגישים את זה — ואני רוצה שתשמעו את זה ממני, לא רק תקראו את זה.</p>
         <cite>— טוהר, מייסד ומדריך ראשי</cite>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHY US ============ -->
-<section>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">למה דווקא אצלנו</span>
-      <h2>שלושה דברים שמרגישים אחרת כבר באימון הראשון</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="num">01</div>
-        <h3>יחס אישי וליווי צמוד</h3>
-        <p>מכירים את החוזקות והחולשות שלך, ונותנים דגשים מדויקים שמביאים התקדמות אמיתית.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="num">02</div>
-        <h3>התאמה אישית שמביאה תוצאות</h3>
-        <p>מתאימים את הקצב והרמה בדיוק אליך, כדי שתשלוט בנשק בצורה הבטוחה, המהירה והיעילה ביותר, עם ביטחון אמיתי!</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="num">03</div>
-        <h3>אווירה מכבדת, בגובה העיניים</h3>
-        <p>לומדים יחד, בקצב שמתאים לך, עם תחושת ביטחון שמאפשרת להתפתח באמת.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHO IS THIS FOR ============ -->
-<section class="section-alt">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">בואו נהיה כנים</span>
-      <h2>למי זה מתאים — ולמי כנראה שלא</h2>
-    </div>
-    <div class="fit-grid reveal">
-      <div class="fit-col yes">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> מתאים לך אם:</h3>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> יש לך רישיון נשק בתוקף, ונשק בפועל</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> אתה רוצה להרגיש שליטה אמיתית — לא רק "לדעת לירות"</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> אתה מוכן להשקיע אימון רציני של 2–3 שעות, לא "טעימה"</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> אתה מעדיף יחס אישי וקבוצה קטנה על פני עוד אימון המוני</li>
-        </ul>
-      </div>
-      <div class="fit-col no">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="var(--ink-faint)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> כנראה שלא בשבילך אם:</h3>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> אין לך רישיון נשק בתוקף (אנחנו לא יכולים לאמן בלי זה)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> אתה מחפש "עוד תעודה" מהר וזול, לא שיפור אמיתי</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> אתה מצפה לתוצאות בלי להתאמן בעצמך</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> אתה מחפש אימון קבוצתי המוני, בלי יחס אישי</li>
-        </ul>
       </div>
     </div>
   </div>
